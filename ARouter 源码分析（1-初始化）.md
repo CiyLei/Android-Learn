@@ -96,16 +96,18 @@ tpe) throws HandlerException {
 开始 `Warehouse` 之前，我们先来理解一下注解生成类的逻辑，我们分为2大类，一种为生成在 `com.alibaba.android.arouter.routes` 包下面的路由生成类，一种是生成在原包名下面的注入类.
 
 1. 生成在 `com.alibaba.android.arouter.routes` 包下面的路由生成类
-    生成规则（XXX为路由根节点，即Group） | 说明
-    - | - |
-    ARouter$$Group$$XXX | 以路由路径为key，RouteMeta为value保存着XXX group下面的所有路由对象信息
-    ARouter$$Root$$XXX | 以group为key，ARouter$$Group$$XXX为value保存着XXX group下面的group信息
-    ARouter$$Providers$$XXX | 以路由路径为key，RouteMeta为value保存着XXX group下面的的 Provider 信息
+
+    | 生成规则（XXX为路由根节点，即Group） | 说明 |
+    | --- | --- |
+    | ARouter$$Group$$XXX | 以路由路径为key，RouteMeta为value保存着XXX group下面的所有路由对象信息 |
+    | ARouter$$Root$$XXX | 以group为key，ARouter$$Group$$XXX为value保存着XXX group下面的group信息 |
+    | ARouter$$Providers$$XXX | 以路由路径为key，RouteMeta为value保存着XXX group下面的的 Provider 信息 |
     
 2. 生成在原包名下面的注入类（最后用得到）
-    生成规则（XXX为被注解的类） | 说明
-    - | - |
-    XXX$$ARouter$$Autowired | 自动注入的生成类
+
+    | 生成规则（XXX为被注解的类） | 说明 |
+    | --- | --- |
+    | XXX$$ARouter$$Autowired | 自动注入的生成类 |
 
 在 `Warehouse` 中有4个列表，我们先提前说明这4个列表是什么（不讲拦截器）。
 
