@@ -1,5 +1,5 @@
 大致流程图：
-![26b5a9327e82b4f139a86e7527fe6897.png](en-resource://database/633:1)
+![Retrofit.png](https://github.com/CiyLei/Android-Learn/blob/master/img/Retrofit.png?raw=true)
 
 我们大致分为3个步骤
 **（1-2）**：分析每个接口的方法和参数注解，并生成设置 **RequestBuilder** 对应的 **ParameterHandler** 处理类
